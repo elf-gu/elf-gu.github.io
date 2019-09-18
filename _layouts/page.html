@@ -1,21 +1,16 @@
 ---
-layout: compress
+layout: default
 ---
+<main class="content" role="main">
+  <article class="post">
+    <div class="post-meta">
+      <h1 class="post-title">{{ page.title }}</h1>
+    </div>
+    <section class="post-content">
+      <a name="topofpage"></a>
+      {{content}}
+    </section>
+  </article>
+</main>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  	{% include head.html %}
-    <body>
-    	{% include svg-icons.html %}
-		<header class="page-header">
-			<h1 class="post-title">{{ page.title }}</h1>
-			{% include menu-search.html %}
-		</header>
-        <main>
-		    {{ content }}
-		</main>
-        {% include footer.html %}
-        {% include scripts.html %}
-		
-    </body>
-</html>
+{% include footer.html %}
